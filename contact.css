@@ -1,0 +1,46 @@
+/* Styles specific to the Contact page form (moved from inline styles) */
+
+/* Apply consistent input/select/textarea appearance inside the form */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+/* Smaller consent text */
+.contact-form .consent {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Align buttons to the right */
+.contact-form .form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Primary button */
+.contact-form button[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Secondary button */
+.contact-form button[type="reset"] {
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+}

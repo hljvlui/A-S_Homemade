@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — A&S Homemade</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <main class="container">
+    <!-- Cabecera / Header -->
+    <header class="site-header" role="banner">
+      <div class="logo-box" id="logoBox">
+        <img src="logo.jpeg" alt="A&S Homemade logo" class="logo-img">
+      </div>
+
+      <div class="brand">
+        <h1 class="title">A&amp;S Homemade</h1>
+        <p class="subtitle">Homemade recipes — simple and made with love</p>
+      </div>
+
+      <nav class="menu-wrapper" aria-label="Main menu">
+        <ul class="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipe.html">Recipe of the Day</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero / Introducción -->
+    <section class="objetivo-section" aria-labelledby="contactTitle">
+      <h2 id="contactTitle" class="section-title">Contact Us</h2>
+      <div class="objetivo-text">
+        <!-- texto introductorio -->
+        <p>If you have questions, suggestions, or want to collaborate, we'd love to hear from you. Below you'll find several ways to reach us — pick the one that works best for you.</p>
+      </div>
+    </section>
+
+    <!-- Sección: Métodos de contacto -->
+    <section class="about-section contact-methods" aria-labelledby="methodsTitle">
+      <h3 id="methodsTitle" class="recipes-title">Ways to reach us</h3>
+
+      <!-- Contact cards -->
+      <div class="recipes-grid">
+        <!-- Email -->
+        <article class="recipe-card" aria-label="Email">
+          <h4 class="recipe-name">Email</h4>
+          <p class="hint">Send us a message to: <a href="mailto:alemulnav@alu.edu.gva.es">alemulnav@alu.edu.gva.es</a> or to: <a href="mailto:example@gmail.com">example@gmail.com</a> </p>
+        </article>
+
+        <!-- Phone -->
+        <article class="recipe-card" aria-label="Phone">
+          <h4 class="recipe-name">Phone</h4>
+          <p class="hint">Call or text: <a href="tel:+34607399103 ">+34 607 399 103</a> (available Mon-Fri, 9am-6pm).</p>
+        </article>
+
+        <!-- Social -->
+        <article class="recipe-card" aria-label="Social media">
+          <h4 class="recipe-name">Social</h4>
+          <p class="hint">Coming soon! </p>
+        </article>
+
+        <!-- Address -->
+        <article class="recipe-card" aria-label="Address">
+          <h4 class="recipe-name">Visit us</h4>
+          <p class="hint">Av. Ciudad León de Nicaragua, 8, 03015 Alicante</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección: Formulario de contacto -->
+    <section class="recipes-section" aria-labelledby="formTitle">
+      <h3 id="formTitle" class="recipes-title">Contact form</h3>
+
+      <!-- Enhanced simple form: more fields, basic validation, minimal inline styles -->
+      <form class="recipe-card contact-form" aria-label="Contact form" method="post" action="#">
+        <fieldset>
+          <legend>Contact Us</legend>
+          <p>
+            <label for="name">Full name<br>
+            <input id="name" name="name" type="text" placeholder="Your full name" required minlength="2"></label>
+          </p>
+          <p>
+            <label for="email">Email<br>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required></label>
+          </p>
+          <p>
+            <label for="reason">Reason<br>
+            <select id="reason" name="reason" style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(0,0,0,0.08);box-sizing:border-box;">
+              <option value="">Choose...</option>
+              <option>Question</option>
+              <option>Suyggest a recipe </option>
+              <option>Other</option>
+            </select></label>
+          </p>
+          <p>
+            <label for="message">Message<br>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message..." required minlength="10"></textarea></label>
+          </p>
+          <p class="consent">
+            <label><input type="checkbox" name="consent" required> I agree to be contacted about my message</label>
+          </p>
+          <p class="form-actions">
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Footer simple -->
+    <footer class="site-footer">
+      <div class="footer-inner">© <span id="year">2026</span> A&S Homemade — All rights reserved.</div>
+    </footer>
+  </main>
+
+</body>
+</html>
