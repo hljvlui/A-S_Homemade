@@ -1,19 +1,270 @@
+/* ------------------------------- */
+/* VARIABLES (colores, sombras, etc.) */
+:root {
+    --bg: #fbfaf8;
+    /* fondo general de la página */
+    --surface: #ffffff;
+    /* color para tarjetas y secciones */
+    --text: #1b1b1b;
+    /* color principal del texto */
+    --accent: #e07a5f;
+    /* color de acento usado en botones/elementos */
+    --accent-2: #f6e6df;
+    /* acento secundario para degradados */
+    --muted: #6b6b6b;
+    /* color para textos secundarios */
+    --shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+    /* sombra reutilizable */
+}
+
+
+/* ------------------------------- */
+/* BASE: html y body */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    /* quitar márgenes por defecto del navegador */
+    font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    /* tipografías seguras */
+    background: linear-gradient(180deg, var(--bg) 0%, #f7f5f3 100%);
+    /* degradado de fondo */
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    /* suavizado para webkit */
+    -moz-osx-font-smoothing: grayscale;
+    /* suavizado para mac */
+}
+
+
+/* ------------------------------- */
+/* CONTENEDOR PRINCIPAL */
+.container {
+    min-height: 100%;
+    display: flex;
+    /* layout vertical con flexbox */
+    flex-direction: column;
+    align-items: center;
+    /* centrar contenido horizontalmente */
+    justify-content: flex-start;
+    /* comenzar desde arriba */
+    gap: 28px;
+    /* espaciado entre secciones */
+    padding: 48px 22px;
+    box-sizing: border-box;
+    max-width: 1100px;
+    /* ancho máximo del contenido */
+    margin: 0 auto;
+    /* centrar en la ventana */
+}
+
+
+/* ------------------------------- */
+/* TÍTULOS */
+h1.title {
+    /* título principal */
+    margin: 0;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    font-family: 'Merriweather', serif;
+    font-size: clamp(28px, 5.6vw, 48px);
+    line-height: 1.05;
+    margin-bottom: 6px;
+}
+
+/* subtítulo más pequeño, usado debajo del título */
+.subtitle {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted)
+}
+
+
+/* Menú horizontal encima del logo */
+.menu-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+}
+
+.menu-list a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    font-weight: 600;
+    transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.12s;
+}
+
+.menu-list a:hover,
+.menu-list a:focus {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: var(--shadow);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.menu-list a:active {
+    transform: translateY(0)
+}
+
+/* ------------------------------- */
+/* LOGO: La imagen cuadrada con bordes redondeados */
+.logo-box {
+    width: 140px;
+    height: 140px;
+    border-radius: 20px;
+    /* Bordes redondeados */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--surface), var(--accent-2));
+    /* Fondo con degradado */
+    box-shadow: var(--shadow);
+    /* Sombra para que flote */
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* .logo-img: imagen dentro del logo (efecto hover para dar vida) */
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.03);
+    transition: transform 0.45s ease;
+}
+
+.logo-box:hover .logo-img {
+    transform: scale(1.08) rotate(-1deg);
+}
+
+/* CABECERA Y PIE DE PÁGINA */
+.site-header {
+    /* La barra superior que se queda fija */
+    width: 100%;
+    max-width: 1100px;
+    /* No más ancha que el contenido */
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.98);
+    /* Casi blanca y un poco transparente */
+    padding: 14px 18px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 18px rgba(12, 20, 30, 0.06);
+    /* Sombra para separarla del fondo */
+    position: sticky;
+    /* Se pega al techo al hacer scroll */
+    top: 0;
+    z-index: 1100;
+    /* Se queda por encima de todo */
+    transition: background-color 200ms ease, box-shadow 200ms ease, backdrop-filter 200ms ease;
+}
+
+.site-header .brand {
+    order: 1;
+    flex: 1
+}
+
+.menu-wrapper {
+    order: 2;
+    position: static;
+    background: transparent
+}
+
+.logo-box {
+    order: 3
+}
+
+@media (max-width:600px) {
+    .menu-wrapper {
+        justify-content: center
+    }
+}
+
+@media (max-width:420px) {
+    .menu-list {
+        gap: 8px
+    }
+
+    .menu-list a {
+        padding: 8px 10px;
+        font-size: 15px
+    }
+}
+
+/* ------------------------------- */
+/* ESTILOS ESPECÍFICOS DE LA RECETA */
+
+/* Estilos específicos para la página de Brownie Clásico */
+
 .recipe-detail {
     background-color: #f0e68c;
-    /* Khaki background */
+    /* Fondo color caqui (amarillo pálido) */
     padding: 2rem;
+    /* Espacio interior */
     border-radius: 8px;
+    /* Bordes redondeados */
     margin-top: 2rem;
+    /* Separación superior */
 }
 
 .recipe-detail h2 {
     color: #3e2723;
-    /* Very dark brown for title */
+    /* Marrón muy oscuro para el título */
     text-align: center;
+    /* Centrar el texto */
 }
 
 .recipe-detail h3 {
     color: #5d4037;
+    /* Marrón medio para subtítulos */
     border-bottom: 2px solid #8d6e63;
+    /* Línea decorativa marrón claro */
     padding-bottom: 0.5rem;
+    /* Espacio entre texto y línea */
+}
+
+.large-recipe-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-description {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.recipe-description ul,
+.recipe-description ol {
+    text-align: left;
 }
