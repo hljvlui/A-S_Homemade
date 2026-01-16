@@ -1,0 +1,19 @@
+.recipe-detail {
+    background-color: #f5f5dc;
+    /* Beige background */
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.recipe-detail h2 {
+    color: #8b4513;
+    /* Saddle brown for title */
+    text-align: center;
+}
+
+.recipe-detail h3 {
+    color: #a0522d;
+    border-bottom: 2px solid #deb887;
+    padding-bottom: 0.5rem;
+}

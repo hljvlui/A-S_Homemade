@@ -1,0 +1,17 @@
+.recipe-detail {
+  background-color: #fffacd; /* Light lemon color background */
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.recipe-detail h2 {
+  color: #d4ac0d; /* Darker yellow for title */
+  text-align: center;
+}
+
+.recipe-detail h3 {
+  color: #b7950b;
+  border-bottom: 2px solid #f1c40f;
+  padding-bottom: 0.5rem;
+}

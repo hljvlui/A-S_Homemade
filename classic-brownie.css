@@ -1,0 +1,19 @@
+.recipe-detail {
+    background-color: #f0e68c;
+    /* Khaki background */
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.recipe-detail h2 {
+    color: #3e2723;
+    /* Very dark brown for title */
+    text-align: center;
+}
+
+.recipe-detail h3 {
+    color: #5d4037;
+    border-bottom: 2px solid #8d6e63;
+    padding-bottom: 0.5rem;
+}

@@ -1,0 +1,19 @@
+.recipe-detail {
+    background-color: #fff8e7;
+    /* Cosmic latte background */
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.recipe-detail h2 {
+    color: #d2691e;
+    /* Chocolate color for title */
+    text-align: center;
+}
+
+.recipe-detail h3 {
+    color: #8b4513;
+    border-bottom: 2px solid #cd853f;
+    padding-bottom: 0.5rem;
+}
