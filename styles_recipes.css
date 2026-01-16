@@ -1,7 +1,10 @@
-.receta-insignia {
+/* Gives style to the main coontent*/
+.signature-recipe {
   text-align: center;
   margin: 40px 0;
 }
+
+/* Makes that the image look bigger*/
 .large-recipe-img {
   width: 100%;
   max-width: 500px;
@@ -12,11 +15,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* It gives style to the description */
 .recipe-description {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
 }
+
+/* Makes that the unordered list ensures to go at left*/
 .recipe-description ul {
   text-align: left;
 }
