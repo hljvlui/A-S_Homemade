@@ -61,7 +61,7 @@ body {
 
 /* ------------------------------- */
 /* TÍTULOS */
-h1.title {
+h1.titulo-principal {
   /* título principal */
   margin: 0;
   font-weight: 700;
@@ -75,7 +75,7 @@ h1.title {
 }
 
 /* subtítulo más pequeño, usado debajo del título */
-.subtitle {
+.subtitulo {
   margin: 0;
   font-size: 15px;
   color: var(--muted)
@@ -83,7 +83,7 @@ h1.title {
 
 
 /* Menú horizontal encima del logo */
-.menu-wrapper {
+.menu {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -91,7 +91,7 @@ h1.title {
   gap: 20px;
 }
 
-.menu-list {
+.lista-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -99,7 +99,7 @@ h1.title {
   gap: 12px;
 }
 
-.menu-list a {
+.lista-menu a {
   display: inline-block;
   padding: 8px 12px;
   border-radius: 999px;
@@ -111,8 +111,8 @@ h1.title {
   transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.12s;
 }
 
-.menu-list a:hover,
-.menu-list a:focus {
+.lista-menu a:hover,
+.lista-menu a:focus {
   background: var(--accent);
   color: #fff;
   box-shadow: var(--shadow);
@@ -120,13 +120,13 @@ h1.title {
   transform: translateY(-2px);
 }
 
-.menu-list a:active {
+.lista-menu a:active {
   transform: translateY(0)
 }
 
 /* ------------------------------- */
 /* LOGO: La imagen cuadrada con bordes redondeados */
-.logo-box {
+.caja-logo {
   width: 140px;
   height: 140px;
   border-radius: 20px;
@@ -145,7 +145,7 @@ h1.title {
 }
 
 /* .logo-img: imagen dentro del logo (efecto hover para dar vida) */
-.logo-img {
+.imagen-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -154,12 +154,12 @@ h1.title {
   transition: transform 0.45s ease;
 }
 
-.logo-box:hover .logo-img {
+.caja-logo:hover .imagen-logo {
   transform: scale(1.08) rotate(-1deg);
 }
 
 /* CABECERA Y PIE DE PÁGINA */
-.site-header {
+.cabecera {
   /* La barra superior que se queda fija */
   width: 100%;
   max-width: 1100px;
@@ -183,33 +183,33 @@ h1.title {
   transition: background-color 200ms ease, box-shadow 200ms ease, backdrop-filter 200ms ease;
 }
 
-.site-header .brand {
+.cabecera .marca {
   order: 1;
   flex: 1
 }
 
-.menu-wrapper {
+.menu {
   order: 2;
   position: static;
   background: transparent
 }
 
-.logo-box {
+.caja-logo {
   order: 3
 }
 
 @media (max-width:600px) {
-  .menu-wrapper {
+  .menu {
     justify-content: center
   }
 }
 
 @media (max-width:420px) {
-  .menu-list {
+  .lista-menu {
     gap: 8px
   }
 
-  .menu-list a {
+  .lista-menu a {
     padding: 8px 10px;
     font-size: 15px
   }
@@ -219,13 +219,13 @@ h1.title {
 /* ESTILOS ESPECÍFICOS DE LA RECETA */
 
 /* Da estilo al contenido principal */
-.signature-recipe {
+.receta-firma {
   text-align: center;
   margin: 40px 0;
 }
 
 /* Hace que la imagen se vea más grande */
-.large-recipe-img {
+.imagen-receta-grande {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -237,14 +237,14 @@ h1.title {
 }
 
 /* Da estilo a la descripción */
-.recipe-description {
+.descripcion-receta {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
 }
 
 /* Asegura que la lista desordenada esté alineada a la izquierda */
-.recipe-description ul,
-.recipe-description ol {
+.descripcion-receta ul,
+.descripcion-receta ol {
   text-align: left;
 }

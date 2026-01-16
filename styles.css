@@ -61,7 +61,7 @@ body {
 
 /* ------------------------------- */
 /* TÍTULOS */
-h1.title {
+h1.titulo-principal {
   /* título principal */
   margin: 0;
   font-weight: 700;
@@ -75,7 +75,7 @@ h1.title {
 }
 
 /* subtítulo más pequeño, usado debajo del título */
-.subtitle {
+.subtitulo {
   margin: 0;
   font-size: 15px;
   color: var(--muted)
@@ -83,7 +83,7 @@ h1.title {
 
 
 /* Menú horizontal encima del logo */
-.menu-wrapper {
+.menu {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -91,7 +91,7 @@ h1.title {
   gap: 20px;
 }
 
-.menu-list {
+.lista-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -99,7 +99,7 @@ h1.title {
   gap: 12px;
 }
 
-.menu-list a {
+.lista-menu a {
   display: inline-block;
   padding: 8px 12px;
   border-radius: 999px;
@@ -111,8 +111,8 @@ h1.title {
   transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.12s;
 }
 
-.menu-list a:hover,
-.menu-list a:focus {
+.lista-menu a:hover,
+.lista-menu a:focus {
   background: var(--accent);
   color: #fff;
   box-shadow: var(--shadow);
@@ -120,13 +120,13 @@ h1.title {
   transform: translateY(-2px);
 }
 
-.menu-list a:active {
+.lista-menu a:active {
   transform: translateY(0)
 }
 
 /* ------------------------------- */
 /* LOGO: La imagen cuadrada con bordes redondeados */
-.logo-box {
+.caja-logo {
   width: 140px;
   height: 140px;
   border-radius: 20px;
@@ -145,7 +145,7 @@ h1.title {
 }
 
 /* .logo-img: imagen dentro del logo (efecto hover para dar vida) */
-.logo-img {
+.imagen-logo {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -154,14 +154,14 @@ h1.title {
   transition: transform 0.45s ease;
 }
 
-.logo-box:hover .logo-img {
+.caja-logo:hover .imagen-logo {
   transform: scale(1.08) rotate(-1deg);
 }
 
 
 /* ------------------------------- */
 /* RECETAS (sección de tarjetas) */
-.recipes-section {
+.seccion-recetas {
   /* contenedor de la sección de recetas */
   width: 100%;
   max-width: 900px;
@@ -169,7 +169,8 @@ h1.title {
   text-align: left;
 }
 
-.recipes-title {
+.recipes-title,
+.titulo-seccion {
   /* Título "Recetas" */
   margin: 8px 0 16px;
   font-size: clamp(20px, 4vw, 26px);
@@ -178,7 +179,7 @@ h1.title {
   color: var(--text);
 }
 
-.recipes-grid {
+.cuadricula-recetas {
   /* grid adaptable para tarjetas */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -186,7 +187,7 @@ h1.title {
   align-items: start;
 }
 
-.recipe-card {
+.tarjeta-receta {
   /* tarjeta individual */
   width: 100%;
   max-width: 320px;
@@ -202,12 +203,12 @@ h1.title {
 }
 
 
-.recipe-card:hover {
+.tarjeta-receta:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(12, 20, 30, 0.12)
 }
 
-.recipe-img {
+.imagen-receta {
   width: 100%;
   height: 140px;
   object-fit: cover;
@@ -215,7 +216,7 @@ h1.title {
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.recipe-name {
+.nombre-receta {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
@@ -223,37 +224,38 @@ h1.title {
   text-align: left
 }
 
-.recipe-card p {
+.tarjeta-receta p,
+.descripcion-corta {
   margin: 0;
   color: var(--muted)
 }
 
 @media (max-width:420px) {
-  .menu-list {
+  .lista-menu {
     gap: 8px
   }
 
-  .menu-list a {
+  .lista-menu a {
     padding: 8px 10px;
     font-size: 15px
   }
 
-  .recipes-grid {
+  .cuadricula-recetas {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px
   }
 
-  .recipe-img {
+  .imagen-receta {
     width: min(140px, 34vw)
   }
 
-  .recipe-name {
+  .nombre-receta {
     font-size: 14px
   }
 }
 
 /* Sección: Quiénes somos */
-.about-section {
+.seccion-nosotros {
   width: 100%;
   max-width: 900px;
   margin: 32px auto;
@@ -261,7 +263,7 @@ h1.title {
   box-sizing: border-box;
 }
 
-.section-title {
+.titulo-seccion {
   margin: 0 0 12px;
   font-size: clamp(20px, 3.6vw, 28px);
   font-weight: 700;
@@ -270,7 +272,7 @@ h1.title {
   padding-left: 12px;
 }
 
-.section-title::before {
+.titulo-seccion::before {
   content: '';
   position: absolute;
   left: 0;
@@ -282,13 +284,13 @@ h1.title {
   border-radius: 4px
 }
 
-.profiles {
+.perfiles {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.profile {
+.perfil {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -299,42 +301,43 @@ h1.title {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
-.profile-left {
+.perfil-izq {
   flex: 0 0 160px;
   font-weight: 800;
   font-size: 18px;
   color: var(--accent);
 }
 
-.profile-right {
+.perfil-der {
   flex: 1;
   font-size: 16px;
   color: var(--muted);
   line-height: 1.6;
 }
 
-.profile-right p {
+.perfil-der p {
   margin: 0
 }
 
 /* Responsive: apilar en pantallas pequeñas */
 @media (max-width:600px) {
-  .profile {
+  .perfil {
     flex-direction: column
   }
 
-  .profile-left {
+  .perfil-izq {
     flex-basis: auto;
     padding-bottom: 8px
   }
 
-  .menu-wrapper {
+  .menu {
     justify-content: center
   }
 }
 
 /* Sección: Nuestro objetivo */
-.objetivo-section {
+.seccion-mision,
+.seccion-historia {
   width: 100%;
   max-width: 900px;
   margin: 24px auto;
@@ -342,7 +345,8 @@ h1.title {
   box-sizing: border-box;
 }
 
-.objetivo-text {
+.texto-mision,
+.texto-historia {
   font-size: 16px;
   color: var(--muted);
   line-height: 1.6;
@@ -358,7 +362,7 @@ h1.title {
 }
 
 /* CABECERA Y PIE DE PÁGINA */
-.site-header {
+.cabecera {
   /* La barra superior que se queda fija */
   width: 100%;
   max-width: 1100px;
@@ -382,18 +386,18 @@ h1.title {
   transition: background-color 200ms ease, box-shadow 200ms ease, backdrop-filter 200ms ease;
 }
 
-.site-header .brand {
+.cabecera .marca {
   order: 1;
   flex: 1
 }
 
-.menu-wrapper {
+.menu {
   order: 2;
   position: static;
   background: transparent
 }
 
-.logo-box {
+.caja-logo {
   order: 3
 }
 
